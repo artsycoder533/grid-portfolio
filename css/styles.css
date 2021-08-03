@@ -402,7 +402,7 @@ Hero
 
 /* media query */
 @media screen and (min-width: 992px){
-  .hero-img {
+  .hero-img, .about-img {
     display: block;
     /* set this as position relative, to that the pseudo element is relative to the parent container */
     position: relative;
@@ -413,7 +413,8 @@ Hero
   }
 
   /* cant do this on the image itself, have to target parent container */
-  .hero-img::before {
+  /* added about image so it uses the same styling as the hero photo */
+  .hero-img::before, .about-img::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -451,6 +452,23 @@ About
   justify-self: center;
 }
 
+
+/* media query */
+/* desktop */
+@media screen and (min-width: 992px){
+  .about-center {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* to swap the border from being on the right to the left */
+  .about-img::before {
+    left: -2rem;
+  }
+
+  .about-info {
+    align-self: center;
+  }
+}
 /*
 =============== 
 Services
