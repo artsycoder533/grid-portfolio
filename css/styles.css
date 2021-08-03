@@ -165,7 +165,15 @@ p {
   }
 }
 /* added during recording */
-
+/* to create underline styling throughout page */
+.underline {
+  width: 5rem;
+  height: 0.25rem;
+  margin-bottom: 1.25rem;
+  background: var(--clr-primary-5);
+  margin-left: auto;
+  margin-right: auto;
+}
 /*
 =============== 
 Navbar
@@ -295,6 +303,7 @@ Sidebar
   letter-spacing: var(--spacing);
   display: inline-block;
   margin-bottom: 1.5rem;
+  color: var(--clr-grey-1);
 }
 
 .sidebar-links a:hover {
@@ -312,12 +321,12 @@ Sidebar
 
 .social-icon {
   font-size: 1.5rem;
-  color: --clr-grey-1;
+  color: var(--clr-grey-1);
   transition: var(--transition);
 }
 
 .social-icon:hover {
-  color: var(--clr-primary-5)
+  color: var(--clr-primary-5);
 }
 
 .close-btn {
@@ -341,8 +350,38 @@ Hero
 ===============
 */
 /* underline added to globals */
+.hero .underline {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+
+.hero-img {
+  display: none;
+}
+
 .hero {
-  
+  background-color: var(--clr-primary-10);
+}
+
+/* to give hero height */
+.hero-center {
+  min-height: calc(100vh - 5rem);
+  /* to center heading text; */
+  display: grid;
+  place-items: center;
+}
+
+.hero-info  h4 {
+  color: var(--clr-grey-5);
+}
+
+.hero-icons {
+  justify-items: start;
+  color: var(--clr-grey-5);
+}
+
+.hero-btn {
+  margin-top: 1.25rem;
 }
 /*
 =============== 
