@@ -246,6 +246,7 @@ Navbar
 
 /* fixed navbar */
 .navbar-fixed {
+  /* position: sticky; */
   position: fixed;
   top: 0;
   left: 0;
@@ -341,8 +342,7 @@ Hero
 */
 /* underline added to globals */
 .hero {
-  background: red;
-  min-height: 130vh;
+  
 }
 /*
 =============== 
