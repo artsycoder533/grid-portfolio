@@ -541,7 +541,73 @@ margins/padding to control spacing in mobile layout rather than using css grid *
 Projects
 ===============
 */
+.projects-text {
+  width: 85vw;
+  max-width: 30rem;
+  margin: 0 auto;
+}
 
+.project {
+  position: relative;
+  background: var(--clr-primary-5);
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+}
+
+.project-info {
+  text-align: center;
+  color: var(--clr-white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* to move project info in the center of card */
+  transform: translate(-50%, -50%);
+  transition: var(--transition);
+  /* set this to 0 to hide project info until you hover */
+  opacity: 0;
+}
+
+.project-info {
+  text-transform: capitalize;
+  color: var(--clr-white);
+}
+
+.project:hover .project-info {
+  /* brings project info to the forefront so it can be seen over the image */
+  opacity: 1;
+}
+
+.project-img {
+  transition: var(--transition);
+  border-radius: var(--radius);
+  height: 15rem;
+  object-fit: cover;
+}
+
+.project:hover .project-img {
+  /* set opacity to img so the the project info can be clearly seen in the forefront */
+  opacity: 0.1;
+}
+
+.project::after {
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0.25rem solid var(--clr-white);
+  border-radius: var(--radius);
+  transition: var(--transition);
+  /* to hide by default */
+  opacity: 0;
+}
+
+/* target the project after element after we hover */
+.project:hover::after {
+  opacity: 1;
+  transform: scale(0.8);
+}
 /*
 =============== 
 Connect
