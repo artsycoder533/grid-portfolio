@@ -692,11 +692,13 @@ Connect
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--clr-white);
+  
   /* set opacity because adding the white background completely covers the video, the opacity
   makes it lighter */
+  /* background: var(--clr-white); */
   /* opacity: 0.7; */
   /* or intead of setting background and opacity, you can just use rgba to set a dark overlay over video */
+  /* the downside to adding this overlay is that the user no longer has control */
   background: rgba(0, 0, 0, 0.6);
   
 }
