@@ -815,7 +815,51 @@ Skills
 Timeline
 ===============
 */
+.timeline-center {
+  width: 80vw;
+  max-width: 40rem;
+}
 
+.timeline-item {
+  border-top: 2px dashed var(--clr-primary-5);
+  margin: 0;
+  padding: 4rem 2rem;
+  /* position relative is for the numbers (1-6) on the side */
+  position: relative;
+}
+
+.timeline p {
+  margin-bottom: 0;
+}
+
+.timeline-item:nth-child(even) {
+  border-left:  2px dashed var(--clr-primary-5);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  /* to make right hand side smaller so that the border will curved and wont have the straight line extending past the curve */
+  margin-right: 2rem;
+  /* make this zero because we added the margin to the right due to the border we can have the text extend all the way because the margin is acting as the padding  */
+  padding-right: 0;
+}
+
+.timeline-item:nth-child(odd) {
+  border-right:  2px dashed var(--clr-primary-5);
+  border-top-right-radius: 2rem;
+  /* border-bottom-left-radius: 2rem; */
+  border-bottom-right-radius: 2rem;
+  margin-left: 2rem;
+  padding-left: 0;
+}
+
+.timeline-item:first-child {
+  border-top: 0;
+  border-top-right-radius: 0;
+}
+
+.timeline-item:last-child {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+}
 /*
 =============== 
 Blog
