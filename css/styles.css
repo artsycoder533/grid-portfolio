@@ -608,6 +608,15 @@ Projects
   opacity: 1;
   transform: scale(0.8);
 }
+
+/* media query */
+@media screen and (min-width: 676px){
+  .projects-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
 /*
 =============== 
 Connect
