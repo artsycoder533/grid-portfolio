@@ -891,7 +891,47 @@ Timeline
 Blog
 ===============
 */
+.blog {
+  background: var(--clr-grey-10);
+}
 
+.card {
+  /* must have some kind of height because you will be using position absolute for both front and back cards */
+  height: 27rem;
+  position: relative;
+  /*  */
+  perspective: 1500px;
+}
+
+.card-side {
+  transition: all 2s linear;
+  backface-visibility: hidden;
+  /* this sets both card front and card back to position absolute since this is their parent container */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* so the opposite side of the card is hidden from view */
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background: red;
+}
+
+.card-back {
+  background: blue;
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card-back {
+  transform: rotateY(0);
+}
 /*
 =============== 
 Footer
